@@ -55,5 +55,4 @@ def test_assign_role(super_admin_user):
     one = Oneneschool()
     role = random.choice(simple_roles)
     request = one.assign_user_role(domain, user.user_id, role)
-    print request.status_code
-    assert 1==2
+    assert request.status_code == 200
